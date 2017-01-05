@@ -1,0 +1,4 @@
+*.log
+.editorconfig
+.idea/
+node_modules/
