@@ -4,6 +4,7 @@ import {FormsModule}   from '@angular/forms';
 
 import {AppComponent} from "./app.component";
 import {HeaderComponent} from "./header/header.component";
+import {FooterComponent} from "./footer/footer.component";
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import {HeaderComponent} from "./header/header.component";
   ],
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   bootstrap: [
     AppComponent
