@@ -8,26 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var HeaderComponent = (function () {
-    function HeaderComponent() {
-        this.onAction = new core_1.EventEmitter();
+var core_1 = require('@angular/core');
+var items_mock_1 = require("../data/items.mock");
+var ItemsService = (function () {
+    function ItemsService() {
     }
-    HeaderComponent.prototype.action = function (command) {
-        this.onAction.emit(command);
+    ItemsService.prototype.getItems = function () {
+        return Promise.resolve(items_mock_1.ITEMS);
     };
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], HeaderComponent.prototype, "onAction", void 0);
-    HeaderComponent = __decorate([
-        core_1.Component({
-            selector: 'header',
-            templateUrl: 'app/header/header.template.html'
-        }), 
+    ItemsService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], HeaderComponent);
-    return HeaderComponent;
+    ], ItemsService);
+    return ItemsService;
 }());
-exports.HeaderComponent = HeaderComponent;
-//# sourceMappingURL=header.component.js.map
+exports.ItemsService = ItemsService;
+//# sourceMappingURL=items.service.js.map

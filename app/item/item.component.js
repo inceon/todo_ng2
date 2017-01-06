@@ -8,26 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var HeaderComponent = (function () {
-    function HeaderComponent() {
-        this.onAction = new core_1.EventEmitter();
+var core_1 = require('@angular/core');
+var item_type_1 = require("../types/item.type");
+var ItemComponent = (function () {
+    function ItemComponent() {
     }
-    HeaderComponent.prototype.action = function (command) {
-        this.onAction.emit(command);
-    };
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], HeaderComponent.prototype, "onAction", void 0);
-    HeaderComponent = __decorate([
+        core_1.Input(), 
+        __metadata('design:type', item_type_1.Item)
+    ], ItemComponent.prototype, "data", void 0);
+    ItemComponent = __decorate([
         core_1.Component({
-            selector: 'header',
-            templateUrl: 'app/header/header.template.html'
+            moduleId: module.id,
+            selector: 'item',
+            templateUrl: './item.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], HeaderComponent);
-    return HeaderComponent;
+    ], ItemComponent);
+    return ItemComponent;
 }());
-exports.HeaderComponent = HeaderComponent;
-//# sourceMappingURL=header.component.js.map
+exports.ItemComponent = ItemComponent;
+//# sourceMappingURL=item.component.js.map
