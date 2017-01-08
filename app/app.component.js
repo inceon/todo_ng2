@@ -29,7 +29,7 @@ var AppComponent = (function () {
     AppComponent.prototype.submit = function (form) {
         this.itemsService
             .addItem(form.value)
-            .then(function (res) { return form.value = null; });
+            .then(function (res) { return form.reset(); });
     };
     AppComponent = __decorate([
         core_1.Component({

@@ -31,7 +31,7 @@ export class AppComponent implements OnInit{
   submit(form: NgForm) {
     this.itemsService
         .addItem(form.value)
-        .then(res => form.value = null);
+        .then(res => form.reset());
 
   }
 }
