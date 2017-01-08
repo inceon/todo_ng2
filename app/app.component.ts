@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {ItemsService} from "./service/items.service";
 import {Item} from "./types/item.type";
+import {NgForm} from "@angular/forms";
 
 @Component({
     moduleId: module.id,
     selector: 'my-app',
     templateUrl: 'app.component.html',
-    providers: [ItemsService]
+    providers: [ItemsService],
 })
 export class AppComponent implements OnInit{
 
@@ -23,7 +24,14 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.itemsService
-      .getItems()
-      .then(res => this.items = res);
+        .getItems()
+        .then(res => this.items = res);
+  }
+
+  submit(form: NgForm) {
+    this.itemsService
+        .addItem(form.value)
+        .then(res => form.value = null);
+
   }
 }

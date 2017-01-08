@@ -8,23 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var items_mock_1 = require("../data/items.mock");
-var ItemsService = (function () {
-    function ItemsService() {
+var core_1 = require("@angular/core");
+var ReversePipe = (function () {
+    function ReversePipe() {
     }
-    ItemsService.prototype.getItems = function () {
-        return Promise.resolve(items_mock_1.ITEMS);
+    ReversePipe.prototype.transform = function (arr) {
+        if (arr) {
+            var copy = arr.slice();
+            return copy.reverse();
+        }
     };
-    ItemsService.prototype.addItem = function (item) {
-        items_mock_1.ITEMS.push(item);
-        return Promise.resolve();
-    };
-    ItemsService = __decorate([
-        core_1.Injectable(), 
+    ReversePipe = __decorate([
+        core_1.Pipe({
+            name: 'reverse',
+            pure: false
+        }), 
         __metadata('design:paramtypes', [])
-    ], ItemsService);
-    return ItemsService;
+    ], ReversePipe);
+    return ReversePipe;
 }());
-exports.ItemsService = ItemsService;
-//# sourceMappingURL=items.service.js.map
+exports.ReversePipe = ReversePipe;
+//# sourceMappingURL=reverse.pipe.js.map

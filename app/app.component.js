@@ -26,12 +26,17 @@ var AppComponent = (function () {
             .getItems()
             .then(function (res) { return _this.items = res; });
     };
+    AppComponent.prototype.submit = function (form) {
+        this.itemsService
+            .addItem(form.value)
+            .then(function (res) { return form.value = null; });
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html',
-            providers: [items_service_1.ItemsService]
+            providers: [items_service_1.ItemsService],
         }), 
         __metadata('design:paramtypes', [items_service_1.ItemsService])
     ], AppComponent);

@@ -9,4 +9,9 @@ export class ItemsService {
       return Promise.resolve(ITEMS);
     }
 
+    addItem(item: Item): Promise<any> {
+      ITEMS.push(item);
+      return Promise.resolve();
+    }
+
 }

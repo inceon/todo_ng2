@@ -15,6 +15,7 @@ var app_component_1 = require("./app.component");
 var header_component_1 = require("./header/header.component");
 var footer_component_1 = require("./footer/footer.component");
 var item_component_1 = require("./item/item.component");
+var reverse_pipe_1 = require("./pipes/reverse.pipe");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 header_component_1.HeaderComponent,
                 footer_component_1.FooterComponent,
-                item_component_1.ItemComponent
+                item_component_1.ItemComponent,
+                reverse_pipe_1.ReversePipe
             ],
             bootstrap: [
                 app_component_1.AppComponent

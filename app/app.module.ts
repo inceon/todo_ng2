@@ -6,6 +6,7 @@ import {AppComponent} from "./app.component";
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {ItemComponent} from "./item/item.component";
+import {ReversePipe} from "./pipes/reverse.pipe";
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import {ItemComponent} from "./item/item.component";
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ItemComponent
+    ItemComponent,
+    ReversePipe
   ],
   bootstrap: [
     AppComponent
